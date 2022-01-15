@@ -1,10 +1,11 @@
 # $Id$
 
-AC_INIT(src/main.c)
+AC_INIT
+AC_CONFIG_SRCDIR([src/main.c])
 
-AC_PREREQ(2.50)
+AC_PREREQ([2.71])
 AC_CONFIG_AUX_DIR(.auto)
-AC_CANONICAL_SYSTEM
+AC_CANONICAL_TARGET
 
 AM_INIT_AUTOMAKE(elk, 3.99.8)
 dnl AM_MAINTAINER_MODE
@@ -15,7 +16,15 @@ AM_PROG_CC_C_O
 AC_PROG_CXX
 AC_LIBTOOL_WIN32_DLL
 AC_PROG_LIBTOOL
-AC_STDC_HEADERS
+m4_warn([obsolete],
+[The preprocessor macro `STDC_HEADERS' is obsolete.
+  Except in unusual embedded environments, you can safely include all
+  ISO C90 headers unconditionally.])dnl
+# Autoupdate added the next two lines to ensure that your configure
+# script's behavior did not change.  They are probably safe to remove.
+AC_CHECK_INCLUDES_DEFAULT
+AC_PROG_EGREP
+
 
 AC_C_CONST
 AC_C_INLINE
@@ -320,13 +329,9 @@ AC_CHECK_FUNCS(fpurge)
 
 AC_CACHE_CHECK([for BSD-style flushing],
   [ac_cv_have_bsd_flush],
-  [AC_TRY_COMPILE(
-    [#include <stdio.h>],
-    [FILE *f;
+  [AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[#include <stdio.h>]], [[FILE *f;
      f->_cnt = 0;
-     f->_ptr = f->_base;],
-    ac_cv_have_bsd_flush=yes,
-    ac_cv_have_bsd_flush=no)])
+     f->_ptr = f->_base;]])],[ac_cv_have_bsd_flush=yes],[ac_cv_have_bsd_flush=no])])
 if test "${ac_cv_have_bsd_flush}" = "yes"; then
   AC_DEFINE(HAVE_BSD_FLUSH, 1, [Define if you have BSD-style flushing])
 fi
@@ -339,8 +344,7 @@ AC_CHECK_HEADERS(termio.h termios.h)
 AC_CHECK_FUNCS(getrlimit)
 AC_CACHE_CHECK([for struct rlimit],
   [ac_cv_have_struct_rlimit],
-  [AC_TRY_COMPILE(
-    [#ifdef HAVE_SYS_TIME_H
+  [AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[#ifdef HAVE_SYS_TIME_H
      #   include <sys/time.h>
      #endif
      #ifdef HAVE_SYS_RESOURCE_H
@@ -348,10 +352,7 @@ AC_CACHE_CHECK([for struct rlimit],
      #endif
      #ifdef HAVE_UNISTD_H
      #   include <unistd.h>
-     #endif],
-    [struct rlimit rl;],
-    ac_cv_have_struct_rlimit=yes,
-    ac_cv_have_struct_rlimit=no)])
+     #endif]], [[struct rlimit rl;]])],[ac_cv_have_struct_rlimit=yes],[ac_cv_have_struct_rlimit=no])])
 if test "${ac_cv_have_struct_rlimit}" = "yes"; then
   AC_DEFINE(HAVE_STRUCT_RLIMIT, 1, [Define if you have struct rlimit])
 fi
@@ -453,14 +454,14 @@ LDFLAGS_save="${LDFLAGS}"
 AC_CACHE_CHECK([if \$CXX really works],
   [ac_cv_my_have_cxx],
   [AC_LANG_PUSH(C++)
-   AC_TRY_COMPILE([],,ac_cv_my_have_cxx=yes, ac_cv_my_have_cxx=no)
+   AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[]], [[]])],[ac_cv_my_have_cxx=yes],[ac_cv_my_have_cxx=no])
    AC_LANG_POP(C++)])
 AM_CONDITIONAL(HAVE_CXX, test "${ac_cv_my_have_cxx}" = "yes")
 
 AC_CACHE_CHECK([if \$CC accepts -Wall],
   [ac_cv_c_Wall],
   [CFLAGS="-Wall ${CFLAGS_save}"
-   AC_TRY_COMPILE([],,ac_cv_c_Wall=yes, ac_cv_c_Wall=no)])
+   AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[]], [[]])],[ac_cv_c_Wall=yes],[ac_cv_c_Wall=no])])
 if test "x${ac_cv_c_Wall}" != "xno"; then
   CFLAGS_save="-Wall ${CFLAGS_save}"
 fi
@@ -470,7 +471,7 @@ CFLAGS_warn="-Wpointer-arith -Wcast-align -Wcast-qual -Wshadow -Wmissing-prototy
 AC_CACHE_CHECK([if \$CC accepts ${CFLAGS_warn}],
   [ac_cv_c_Wwarn],
   [CFLAGS="${CFLAGS_warn} ${CFLAGS_save}"
-   AC_TRY_COMPILE([],,ac_cv_c_Wwarn=yes, ac_cv_c_Wwarn=no)])
+   AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[]], [[]])],[ac_cv_c_Wwarn=yes],[ac_cv_c_Wwarn=no])])
 if test "x${ac_cv_c_Wwarn}" != "xno"; then
   CFLAGS_save="${CFLAGS_warn} ${CFLAGS_save}"
 fi
