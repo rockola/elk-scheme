@@ -208,7 +208,7 @@ the distribution.
     dynamically loadable Elk extensions
 * `doc/` The directory tree holding the documentation for
   Elk as troff input files and pre-generated
-  PostScript files.  See [`doc/README`](doc/README) for a roadmap
+  PostScript files.  See [`doc/README`](doc/README.md) for a roadmap
   of the `doc` tree.
 * `examples/` A collection of demonstration programs for Elk
   and the various extensions (mostly in Scheme)
