@@ -30,6 +30,15 @@ products as well as free software projects).
 
 ## Getting Elk
 
+https://github.com/rockola/elk-scheme
+
+A non-trivial example application using Elk as its extension language
+is available as source and pre-compiled binaries (`unroff` is a troff
+translator with back-ends for HTML and the -ms and -man macros):
+
+http://github.com/rockola/unroff
+
+
 ### Original v3.99
 
 You can obtain the Elk 3.99 distribution as well as additional information
