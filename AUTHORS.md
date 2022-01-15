@@ -14,7 +14,7 @@ project in 1987. Carsten also wrote most of the bignum code.
    Oliver also would like to thank Claus Bathe of NME Berlin for securing the
 permission from his management to publish Elk 1.2 (from which the present
 version has been derived), and Prof. Dr. Sigram Schindler for providing the
-work environment for his research work at Technische Universitaet Berlin.
+work environment for his research work at Technische Universität Berlin.
 
    In addition, Oliver would like to thank Nick Betteridge, Stephen Bevan,
 Alan Bishop, Tim Bradshaw, Paul Breslaw, Dennis Brueni, Thomas Dickey, Ted
