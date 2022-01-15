@@ -110,15 +110,15 @@ about Elk at http://sam.zoy.org/elk/
 
 *  Comprehensive documentation
 
-     The distribution includes 230+ pages of fully indexed documentation.
-     All manuals exist as troff input files which can be translated to HTML
-     (with `unroff`) for online browsing in addition to producing typeset-
-     quality printed versions.
+  The distribution includes 230+ pages of fully indexed documentation.
+  All manuals exist as troff input files which can be translated to
+  HTML (with [`unroff`](https://github.com/rockola/unroff)) for online
+  browsing in addition to producing typeset- quality printed versions.
 
 *  Distributed in legally unencumbered form
 
-     The copyright/license agreement permits free redistribution and use
-     of Elk in commercial products.
+  The copyright/license agreement permits free redistribution and use
+  of Elk in commercial products.
 
 
 ## Why is Elk using Scheme?
