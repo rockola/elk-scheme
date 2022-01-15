@@ -66,8 +66,8 @@ EXTRA_DIST = \
 	$(NULL)
 
 bin_PROGRAMS = elk
-elk_LDADD = $(top_builddir)/src/libelk.la
 elk_SOURCES = main.c
+elk_LDADD = libelk.la
 
 install-exec-hook:
 	rm -f "$(DESTDIR)$(bindir)/scheme-elk"
