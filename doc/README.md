@@ -48,16 +48,16 @@ information).
 * `oops/`      A manual for the simple Scheme-based object oriented programming
            tool included in Elk (`oops.scm`).
 
-* `cprog/`     The C/C++ Programmer's Manual for Elk.  This comprehensive
-	   manual describes the facilities of the C/C++ interface of
-	   Elk. Topics range from the general architecture of Elk-based
-	   applications and defining application-specific Scheme types
-	   and primitives, to more advanced subjects such as interacting
-	   with the garbage collector.  The audience are authors of
-	   Elk-based applications and extension writers.
+* `cprog/` The C/C++ Programmer's Manual for Elk.  This comprehensive
+   manual describes the facilities of the C/C++ interface of
+   Elk. Topics range from the general architecture of Elk-based
+   applications and defining application-specific Scheme types and
+   primitives, to more advanced subjects such as interacting with the
+   garbage collector.  The audience are authors of Elk-based
+   applications and extension writers.
 
-	   This manual is a replacement for the document that lived in
-	   a subdirectory `ex` in earlier version of Elk.
+   This manual is a replacement for the document that lived in a
+   subdirectory `ex` in earlier version of Elk.
 
 * `util/`      A collection of troff macro files and other utilities needed
 	   for typesetting the documentation in the above directories.
