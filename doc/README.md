@@ -16,8 +16,7 @@ usenix/usenix.ms, and man/elk.1 (i.e. insert a comment token before it)
 and rebuild the document(s).
 
 All the documents have been prepared for translation to HTML using
-the Elk-based `unroff' package (see ../README for availability
-information).
+the Elk-based [`unroff`](https://github.com/rockola/unroff) package.
 
 
 * `kernel/`    The Scheme Reference for Elk.  It describes the Scheme language
