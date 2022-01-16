@@ -4,6 +4,13 @@
 This fork is based on Elk 3.99, a pre-release of Elk 4.0, the
 Extension Language Kit.
 
+## Build
+```
+autoreconf -i
+./configure
+make
+```
+
 ## What is Elk?
 
 Elk is an implementation of the Scheme programming language.
