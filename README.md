@@ -1,7 +1,7 @@
 # Elk
 ![Elk logo](https://raw.githubusercontent.com/rockola/elk-scheme/master/doc/elk-logo.png)
 
-This fork is based on Elk 3.99, a pre-release of Elk 4.0, the
+This fork is based on Elk 3.99.8, a pre-release of Elk 4.0, the
 Extension Language Kit.
 
 ## Build
