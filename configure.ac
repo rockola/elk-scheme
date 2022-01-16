@@ -1,6 +1,6 @@
 # elk-scheme configure.ac
 
-AC_INIT([elk],[3.99.8])
+AC_INIT([elk],[3.99.8r1])
 AC_CANONICAL_TARGET
 AC_CONFIG_SRCDIR([src/main.c])
 
@@ -618,7 +618,7 @@ AC_OUTPUT
 
 cat << EOF
 
-Elk configuration summary
+${PACKAGE_NAME} ${PACKAGE_VERSION} configuration summary
 -------------------------
 build C++ plugins: ${ac_cv_my_have_cxx}
 libgdbm support: ${ac_cv_my_have_gdbm}
