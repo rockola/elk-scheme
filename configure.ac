@@ -1,25 +1,29 @@
-# $Id$
+# elk-scheme configure.ac
 
-AC_INIT
+AC_INIT([elk],[3.99.8])
+AC_CANONICAL_TARGET
 AC_CONFIG_SRCDIR([src/main.c])
 
 AC_PREREQ([2.71])
 AC_CONFIG_AUX_DIR(.auto)
-AC_CANONICAL_TARGET
-
-AM_INIT_AUTOMAKE(elk, 3.99.8)
-dnl AM_MAINTAINER_MODE
-AM_CONFIG_HEADER(config.h)
+AC_CONFIG_MACRO_DIRS([.auto/m4])
+AC_CONFIG_HEADERS(config.h)
 
 AC_PROG_CC
-AM_PROG_CC_C_O
 AC_PROG_CXX
-AC_LIBTOOL_WIN32_DLL
-AC_PROG_LIBTOOL
-m4_warn([obsolete],
-[The preprocessor macro `STDC_HEADERS' is obsolete.
-  Except in unusual embedded environments, you can safely include all
-  ISO C90 headers unconditionally.])dnl
+
+AM_INIT_AUTOMAKE
+AM_PROG_CC_C_O
+
+# AC_REQUIRE(AC_CANONICAL_HOST)_LT_SET_OPTION([LT_INIT],[win32-dll])
+dnl m4_warn([obsolete],[AC_LIBTOOL_WIN32_DLL: Remove this warning and the call to _LT_SET_OPTION when you
+dnl put the 'win32-dll' option into LT_INIT's first parameter.])
+
+LT_INIT
+dnl m4_warn([obsolete],
+dnl [The preprocessor macro `STDC_HEADERS' is obsolete.
+dnl   Except in unusual embedded environments, you can safely include all
+dnl   ISO C90 headers unconditionally.])dnl
 # Autoupdate added the next two lines to ensure that your configure
 # script's behavior did not change.  They are probably safe to remove.
 AC_CHECK_INCLUDES_DEFAULT
@@ -547,8 +551,10 @@ AM_CONDITIONAL(HAVE_MOTIF, test "${ac_cv_my_have_motif}" = "yes")
 AC_SUBST(MOTIF_CFLAGS)
 AC_SUBST(MOTIF_LIBS)
 
-INCLUDES="${INCLUDES} -I\$(top_srcdir)/include -I\$(top_builddir)/include"
-AC_SUBST(INCLUDES)
+#INCLUDES="${INCLUDES} -I\$(top_srcdir)/include -I\$(top_builddir)/include"
+#AC_SUBST(INCLUDES)
+AM_CPPFLAGS="-I\$(top_srcdir)/include -I\$(top_builddir)/include"
+AC_SUBST([AM_CPPFLAGS])
 
 dnl  Export variables
 AC_SUBST(ELK_CFLAGS)

@@ -1,5 +1,7 @@
 NULL = 
 
+ACLOCAL_AMFLAGS = -I .auto/m4
+
 SUBDIRS = include src lib scm doc examples test
 DIST_SUBDIRS = $(SUBDIRS)
 
