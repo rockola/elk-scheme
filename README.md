@@ -53,6 +53,8 @@ http://github.com/rockola/unroff
 
 ### Original v3.99
 
+Elk 3.99.8 is mirrored on GitHub at https://github.com/cellularmitosis/elk-scheme-mirror
+
 You can obtain the Elk 3.99 distribution as well as additional information
 about Elk at http://sam.zoy.org/elk/
 
