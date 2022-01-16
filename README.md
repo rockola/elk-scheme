@@ -10,6 +10,10 @@ autoreconf -i
 ./configure
 make
 ```
+Install `elk` in `/usr/local/bin`:
+```
+sudo make install
+```
 
 ## What is Elk?
 
