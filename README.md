@@ -61,7 +61,7 @@ about Elk at http://sam.zoy.org/elk/
 
 ## Elk features
 
-*  Full incremental, dynamic loading
+###  Full incremental, dynamic loading
 
      This facility enables Scheme code to load compiled Scheme extensions
      into the running interpreter (or into the application) on demand.
@@ -76,7 +76,7 @@ about Elk at http://sam.zoy.org/elk/
      initialization of dynamically loaded extensions and takes care of
      C++ static constructors/destructors embedded in object files.
 
-*  Freezing of fully customized applications into executable files
+###  Freezing of fully customized applications into executable files
 
      Elk provides a new Scheme primitive `dump` which freezes the dynamic
     runtime image of the Scheme interpreter into an executable file
@@ -86,7 +86,7 @@ about Elk at http://sam.zoy.org/elk/
      created (not unlike `fork()` in UNIX).  Dynamic loading and `dump`
      increase the usability of Elk as the backbone of complex applications.
 
-*  Powerful C/C++ interface for language interoperability
+###  Powerful C/C++ interface for language interoperability
 
      Elk provides for a tight integration of the C/C++ core of applications
      (or extensions) with the extension language.  Applications can define
@@ -97,7 +97,7 @@ about Elk at http://sam.zoy.org/elk/
      Scheme errors, define Scheme variables and symbols, evaluate
      S-expressions encoded as C strings, and utilize the garbage collector.
 
-*  Full Scheme bindings for X11 and Motif
+### Full Scheme bindings for X11 and Motif
 
      Several dynamically loadable extensions provide full Scheme access to
      the X11/OpenWindows Xlib, to the application programmer interface of
@@ -105,14 +105,14 @@ about Elk at http://sam.zoy.org/elk/
      Using these extensions, the graphical user-interfaces of Elk-based
      applications can be built entirely in the extension language.
 
-*  UNIX interface
+###  UNIX interface
 
      Elk provides Scheme access to most UNIX system calls and common C
      library functions.  The UNIX extension supports a wide range of
      different UNIX platforms without restricting its functionality to the
      lowest common denominator or to the POSIX 1003.1 functions.
 
-*  Stop-and-copy and generational, incremental garbage collection
+###  Stop-and-copy and generational, incremental garbage collection
 
      Elk employs two garbage collection strategies selectable at compile
      time: a traditional stop-and-copy garbage collector and a generational
@@ -121,7 +121,7 @@ about Elk at http://sam.zoy.org/elk/
      advanced memory management, `incremental' mode can be enabled for the
      generational garbage collector to further reduce wait times.
 
-*  Non-standard Scheme features
+###  Non-standard Scheme features
 
      In addition to the standard Scheme core, Elk supports first-class
      environments, error handling, provide/require and autoloading,
@@ -131,14 +131,14 @@ about Elk at http://sam.zoy.org/elk/
      in Scheme, a Scheme debugger and a pretty printer, arbitrary length
      bitstrings, and Scheme records.
 
-*  Comprehensive documentation
+###  Comprehensive documentation
 
   The distribution includes 230+ pages of fully indexed documentation.
   All manuals exist as troff input files which can be translated to
   HTML (with [`unroff`](https://github.com/rockola/unroff)) for online
   browsing in addition to producing typeset- quality printed versions.
 
-*  Distributed in legally unencumbered form
+###  Distributed in legally unencumbered form
 
   The copyright/license agreement permits free redistribution and use
   of Elk in commercial products.
