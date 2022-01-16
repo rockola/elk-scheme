@@ -7,6 +7,9 @@
 ;;;  (calc-close) --  Close pipes, wait for child process
 ;;;
 ;;;
+;;; This program seems to work with GNU dc (GNU bc 1.07.1) just fine.
+;;;
+;;; Obsolete note:
 ;;; This program requires vanilla UNIX dc.  It does not work with GNU dc,
 ;;; because GNU dc uses buffered output even if standard output points to
 ;;; a pipe.  This means that GNU dc does not produce any output until the
