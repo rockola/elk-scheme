@@ -362,6 +362,8 @@ called",
 void Usage () {
     char **p;
 
+    fprintf (stderr, "%s\n", PACKAGE_STRING);
+
     fprintf (stderr, "Usage: %s [options] [arguments]\n", Argv[0]);
     for (p = Usage_Msg; *p; p++)
         fprintf (stderr, "%s\n", *p);
