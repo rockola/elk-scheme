@@ -63,7 +63,7 @@ about Elk at http://sam.zoy.org/elk/
 
 ###  Full incremental, dynamic loading
 
-     This facility enables Scheme code to load compiled Scheme extensions
+  This facility enables Scheme code to load compiled Scheme extensions
      into the running interpreter (or into the application) on demand.
      Complex Elk-based applications can be decomposed into dynamically
      loadable components to avoid large, monolithic executables.
@@ -71,14 +71,14 @@ about Elk at http://sam.zoy.org/elk/
      Scheme; they may include an efficient, low-level layer written in C
      or C++.
 
-     Dynamic loading in Elk is supported on many platforms and is not
+  Dynamic loading in Elk is supported on many platforms and is not
      restricted to a dlopen() interface.  Elk provides automatic
      initialization of dynamically loaded extensions and takes care of
      C++ static constructors/destructors embedded in object files.
 
 ###  Freezing of fully customized applications into executable files
 
-     Elk provides a new Scheme primitive `dump` which freezes the dynamic
+  Elk provides a new Scheme primitive `dump` which freezes the dynamic
     runtime image of the Scheme interpreter into an executable file
      (including an enclosing application if present).  This facility
      resembles `unexec()` in Emacs, but the new executable resumes execution
@@ -88,7 +88,7 @@ about Elk at http://sam.zoy.org/elk/
 
 ###  Powerful C/C++ interface for language interoperability
 
-     Elk provides for a tight integration of the C/C++ core of applications
+  Elk provides for a tight integration of the C/C++ core of applications
      (or extensions) with the extension language.  Applications can define
      their own Scheme primitives (three calling disciplines are supported),
      define application-specific first-class Scheme types with customized
@@ -99,7 +99,7 @@ about Elk at http://sam.zoy.org/elk/
 
 ### Full Scheme bindings for X11 and Motif
 
-     Several dynamically loadable extensions provide full Scheme access to
+  Several dynamically loadable extensions provide full Scheme access to
      the X11/OpenWindows Xlib, to the application programmer interface of
      the Xt intrinsics, and to the Athena and OSF/Motif widget sets.
      Using these extensions, the graphical user-interfaces of Elk-based
@@ -107,23 +107,23 @@ about Elk at http://sam.zoy.org/elk/
 
 ###  UNIX interface
 
-     Elk provides Scheme access to most UNIX system calls and common C
+  Elk provides Scheme access to most UNIX system calls and common C
      library functions.  The UNIX extension supports a wide range of
      different UNIX platforms without restricting its functionality to the
      lowest common denominator or to the POSIX 1003.1 functions.
 
 ###  Stop-and-copy and generational, incremental garbage collection
 
-     Elk employs two garbage collection strategies selectable at compile
+  Elk employs two garbage collection strategies selectable at compile
      time: a traditional stop-and-copy garbage collector and a generational
      garbage collector which is more efficient and thus reduces the time the
      application is disrupted by a garbage collection.  On platforms with
-     advanced memory management, `incremental' mode can be enabled for the
+     advanced memory management, "incremental" mode can be enabled for the
      generational garbage collector to further reduce wait times.
 
 ###  Non-standard Scheme features
 
-     In addition to the standard Scheme core, Elk supports first-class
+  In addition to the standard Scheme core, Elk supports first-class
      environments, error handling, provide/require and autoloading,
      fluid bindings and dynamic-wind, simple `eval-twice`-style macros,
      property lists, string ports and bidirectional ports, shell-style
