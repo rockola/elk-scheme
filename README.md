@@ -48,7 +48,7 @@ products as well as free software projects).
 https://github.com/rockola/elk-scheme
 
 A non-trivial example application using Elk as its extension language
-is available as source and pre-compiled binaries (`unroff` is a troff
+is available as source (`unroff` is a troff
 translator with back-ends for HTML and the -ms and -man macros):
 
 http://github.com/rockola/unroff
