@@ -270,7 +270,8 @@ void Elk_Init (int ac, char **av, int init_objects, char *toplevel) {
                 fprintf (stderr, "Heap size must be a positive number.\n");
                 exit (1);
             }
-        } else if (strcmp (av[First_Arg], "-l") == 0) {
+        } else if (strcmp (av[First_Arg], "-l") == 0
+                   || strcmp (av[First_Arg], "--load") == 0) {
             if (++First_Arg == ac || loadfile)
                 Usage ();
             loadfile = av[First_Arg];
