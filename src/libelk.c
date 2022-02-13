@@ -248,6 +248,9 @@ void Elk_Init (int ac, char **av, int init_objects, char *toplevel) {
     for ( ; First_Arg < ac; First_Arg++) {
         if (strcmp (av[First_Arg], "-debug") == 0) {
             debug = 1;
+        } else if (strcmp (av[First_Arg], "--version") == 0) {
+            fprintf (stderr, "%s\n", PACKAGE_VERSION);
+            exit(0);
         } else if (strcmp (av[First_Arg], "-g") == 0) {
             Case_Insensitive = 0;
         } else if (strcmp (av[First_Arg], "-i") == 0) {
